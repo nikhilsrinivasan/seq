@@ -118,6 +118,7 @@ engine = ContextEngine({
     'ride': [KeywordMatcher('ride.kw.txt')],
     'map': [KeywordMatcher('map.kw.txt'), ExactMatcher('restaurants.txt'), AddressMatcher()],
     'stay': [KeywordMatcher('stay.kw.txt'), AddressMatcher()],
+    'flight': [AddressMatcher()],
     'artist': [ExactMatcher('artists.txt')]
 })
 
