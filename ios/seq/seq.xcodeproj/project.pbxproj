@@ -149,8 +149,8 @@
 		20F29943198C1EC30079F79F = {
 			isa = PBXGroup;
 			children = (
-				20F29955198C1EC40079F79F /* Seq */,
-				20F29974198C1EC40079F79F /* SeqTests */,
+				20F29955198C1EC40079F79F /* seq */,
+				20F29974198C1EC40079F79F /* seqTests */,
 				20F2994E198C1EC30079F79F /* Frameworks */,
 				20F2994D198C1EC30079F79F /* Products */,
 			);
@@ -176,7 +176,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		20F29955198C1EC40079F79F /* Seq */ = {
+		20F29955198C1EC40079F79F /* seq */ = {
 			isa = PBXGroup;
 			children = (
 				20EF01B2198E23CA001CBEDC /* Images */,
@@ -187,6 +187,7 @@
 				20F2998D198C97440079F79F /* AppSwitch.h */,
 				20F2998E198C97440079F79F /* AppSwitch.m */,
 			);
+			name = seq;
 			path = Seq;
 			sourceTree = "<group>";
 		};
@@ -201,12 +202,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		20F29974198C1EC40079F79F /* SeqTests */ = {
+		20F29974198C1EC40079F79F /* seqTests */ = {
 			isa = PBXGroup;
 			children = (
 				20F2997A198C1EC40079F79F /* SeqTests.m */,
 				20F29975198C1EC40079F79F /* Supporting Files */,
 			);
+			name = seqTests;
 			path = SeqTests;
 			sourceTree = "<group>";
 		};
