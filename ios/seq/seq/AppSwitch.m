@@ -225,4 +225,38 @@
     
 }
 
+
+#pragma mark Hipmunk
++ (void)launchHipmunkHotelSearch {
+    
+    NSURL *url = [NSURL URLWithString:@"hipmunk:/search/hotels"];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    
+    else {
+        NSString *appStoreLink = @"itms-apps://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreLink]];
+    }
+    
+}
+
++ (void)launchHipmunkFlightSearch {
+    
+    NSURL *url = [NSURL URLWithString:@"hipmunk:/search/flights"];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    
+    else {
+        NSString *appStoreLink = @"itms-apps://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreLink]];
+    }
+    
+    
+}
+
+
 @end

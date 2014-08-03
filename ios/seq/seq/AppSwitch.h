@@ -40,4 +40,8 @@
 
 + (void)launchGeniusWithArtistID:(NSString *)artistID;
 
++ (void)launchHipmunkFlightSearch;
+
++ (void)launchHipmunkHotelsSearch;
+
 @end

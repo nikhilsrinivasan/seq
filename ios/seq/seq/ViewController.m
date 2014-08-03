@@ -10,6 +10,11 @@
 #import "AppSwitch.h"
 #import "ViewController.h"
 
+static float rowHeight;
+
+static float latitude;
+static float longitude;
+
 @interface ViewController ()
 
 @end
@@ -23,22 +28,12 @@
     
     [super viewDidLoad];
     
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     [self initContexts];
     [self setupLocation];
     
     [super viewDidLoad];
-    [Wit sharedInstance].delegate = self;
-    // wit sample button start
-    CGRect screen = [UIScreen mainScreen].bounds;
-    CGFloat w = 100;
-    CGRect rect = CGRectMake(screen.size.width/2 - w/2, 60, w, 100);
-    
-    WITMicButton* witButton = [[WITMicButton alloc] initWithFrame:rect];
-    [self.view addSubview:witButton];
-    labelView = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, screen.size.width, 50)];
-    labelView.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:labelView];
-    // wit sample button end
     
     tableView.alpha = 0;
     self.tableView.separatorColor = [UIColor clearColor];
@@ -46,7 +41,8 @@
     [tableView setScrollEnabled:NO];
     
     [tableView setSeparatorInset:UIEdgeInsetsZero];
-
+    
+    rowHeight = 50.0f;
     
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[UIColor whiteColor]];
     
@@ -70,8 +66,8 @@
 -(void) locationManager: (CLLocationManager *)manager didUpdateToLocation: (CLLocation *) newLocation
            fromLocation: (CLLocation *) oldLocation {
     
-    float longitude=newLocation.coordinate.longitude;
-    float latitude=newLocation.coordinate.latitude;
+    longitude =newLocation.coordinate.longitude;
+    latitude=newLocation.coordinate.latitude;
     
     NSLog(@"dLongitude : %f", longitude);
     NSLog(@"dLatitude : %f", latitude);
@@ -84,12 +80,13 @@
     
     NSArray *food = [[NSArray alloc]initWithObjects:@"yelp", nil];
     NSArray *ride = [[NSArray alloc]initWithObjects:@"lyft", @"uber", nil];
-    NSArray *stay = [[NSArray alloc]initWithObjects:@"airbnb", nil];
-    NSArray *flight = [[NSArray alloc] initWithObjects:@"expedia", @"kayak", @"hipmunk", nil];
+    NSArray *stay = [[NSArray alloc]initWithObjects:@"airbnb", @"hipmunk-hotels", nil];
+    NSArray *flight = [[NSArray alloc] initWithObjects:@"hipmunk-flights", nil];
     
     NSArray *map = [[NSArray alloc ]initWithObjects:@"maps", @"google-maps", @"foursquare", nil];
 
-    NSArray *artist = [[NSArray alloc ]initWithObjects:@"spotify-artist", @"rdio-artist", @"genius-artist", nil];
+    NSArray *artist = [[NSArray alloc ]initWithObjects:@"spotify", @"rdio", @"genius", nil];
+    
     NSArray *track = [[NSArray alloc ]initWithObjects:@"spotify-track", @"rdio-track", nil];
     
     [contexts setObject:food forKey:@"food"];
@@ -98,8 +95,8 @@
     [contexts setObject:stay forKey:@"stay"];
     [contexts setObject:artist forKey:@"artist"];
     [contexts setObject:track forKey:@"track"];
+    [contexts setObject:flight forKey:@"flight"];
     
-//    matchedContexts = [[NSArray alloc]initWithObjects:@"food", @"ride", @"map", @"stay", nil];
     matchedContexts = [[NSArray alloc]init];
     
     
@@ -110,11 +107,13 @@
 
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     
+    //rowHeight = 50.0f;
+    
     tableView.alpha = 1;
     
     matchedContexts = [[NSArray alloc]init];
 
-        [self refreshTable];
+    [self refreshTable];
     
 }
 
@@ -125,6 +124,7 @@
     tableView.backgroundView = nil;
     tableView.backgroundColor = [UIColor clearColor];
 }
+
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     
@@ -139,27 +139,50 @@
         
         matchedContexts = [[NSArray alloc] initWithArray:[self seq_context_query:searchText]];
         
-        // prefetch foursquare venue id
-        if([matchedContexts containsObject:@"map"]) {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-                venueID = [Foursquare getVenueIDForSearchQuery:[searchBar text]];
-                NSLog(@"fetched %@", venueID);
-            });
-        }
-        
-        // prefetch airbnb room id
-        if([matchedContexts containsObject:@"stay"]) {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-                roomID = [[Airbnb getAirbnbRoomsForLocation:[searchBar text]]objectAtIndex:0];
-                NSLog(@"fetched %@", roomID);
-            });
-            
-            
-        }
-        
-        
         [self refreshTable];
     }
+}
+
+-(void)preFetchResults {
+    
+    // prefetch foursquare venue id
+    if([matchedContexts containsObject:@"map"]) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            venueID = [Foursquare getVenueIDForSearchQuery:[searchBar text]];
+            NSLog(@"fetched %@", venueID);
+        });
+    }
+    
+    // prefetch airbnb room id
+    if([matchedContexts containsObject:@"stay"]) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            roomID = [[Airbnb getAirbnbRoomsForLocation:[searchBar text]]objectAtIndex:0];
+            NSLog(@"fetched %@", roomID);
+        });
+        
+        
+    }
+}
+
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    [self preFetchResults];
+    
+    NSLog(@"attempting change");
+    
+   // tableView.rowHeight = 75.0f;
+
+   // [self.tableView reloadRowsAtIndexPaths:[tableView indexPathsForVisibleRows] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+}
+
+- (NSIndexPath *)keyForIndexPath:(NSIndexPath *)indexPath
+{
+    if ([indexPath class] == [NSIndexPath class]) {
+        return indexPath;
+    }
+    return [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
 }
 
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
@@ -204,7 +227,7 @@
     tableView.backgroundView = nil;
     [tableView setSeparatorInset:UIEdgeInsetsZero];
 
-    [tableView setScrollEnabled:NO];
+   // [tableView setScrollEnabled:NO];
     
     NSMutableArray *contextApps = [[NSMutableArray alloc]init];
     for(int i = 0; i < matchedContexts.count; i++) {
@@ -213,26 +236,31 @@
     
     NSString *appName = [contextApps objectAtIndex:[indexPath row]];
     
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:appName];
+    UITableViewCell *cell;
     
-    [[cell textLabel]setText:[self cellTextForAppName:appName]];
-    [[cell detailTextLabel]setText:[self cellDetailTextForAppName:appName]];
+    //cell = [tableView dequeueReusableCellWithIdentifier:appName];
     
-    [[cell textLabel]setTextColor:[UIColor whiteColor]];
-    [[cell detailTextLabel]setTextColor:[UIColor whiteColor]];
+    //if(cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:appName];
     
+        [[cell textLabel]setText:[self cellTextForAppName:appName]];
+        [[cell detailTextLabel]setText:[self cellDetailTextForAppName:appName]];
+        
+        [[cell textLabel]setTextColor:[UIColor whiteColor]];
+        [[cell detailTextLabel]setTextColor:[UIColor whiteColor]];
 
-    cell.backgroundColor = [UIColor clearColor];
-    cell.contentView.backgroundColor = [UIColor colorWithRed: 0/255.0 green: 0/255.0 blue: 0/255.0 alpha: 0.25];
+        cell.backgroundColor = [UIColor clearColor];
+        cell.contentView.backgroundColor = [UIColor colorWithRed: 0/255.0 green: 0/255.0 blue: 0/255.0 alpha: 0.25];
 
-    cell.textLabel.font = [UIFont fontWithName:@"Avenir" size:17];
-    cell.detailTextLabel.font = [UIFont fontWithName:@"Avenir" size:13];
+        cell.textLabel.font = [UIFont fontWithName:@"Avenir" size:17];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"Avenir" size:13];
     
-    [[cell imageView]setImage:[UIImage imageNamed:@"airbnb"]];
-    
-    cell.clipsToBounds = YES;
-    
-    //UILabel *label = [[UILabel alloc]init];
+        [[cell imageView]setImage:[UIImage imageNamed:appName]];
+        
+        cell.clipsToBounds = YES;
+        
+        //UILabel *label = [[UILabel alloc]init];
+    //}
     
     return cell;
     
@@ -252,7 +280,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50.0;
+    NSLog(@"curr height = %f", rowHeight);
+    return rowHeight;
 }
 
 -(NSString *)cellDetailTextForAppName:(NSString *)appName {
@@ -288,6 +317,14 @@
     
     else if([appName isEqualToString:@"foursquare"]) {
         return @"Open this place in foursquare";
+    }
+    
+    else if([appName isEqualToString:@"hipmunk-hotels"]) {
+        return @"Book a hotel with Hipmunk";
+    }
+    
+    else if([appName isEqualToString:@"hipmunk-flights"]) {
+        return @"Book a flight with Hipmunk";
     }
     
     else ;
@@ -330,16 +367,24 @@
         return @"Foursquare";
     }
     
-    else if([appName isEqualToString:@"spotify-artist"]) {
+    else if([appName isEqualToString:@"spotify"]) {
         return @"Spotify";
     }
     
-    else if([appName isEqualToString:@"rdio-artist"]) {
+    else if([appName isEqualToString:@"rdio"]) {
         return @"Rdio";
     }
     
-    else if([appName isEqualToString:@"genius-artist"]) {
+    else if([appName isEqualToString:@"genius"]) {
         return @"Genius";
+    }
+    
+    else if([appName isEqualToString:@"hipmunk-hotels"]) {
+        return @"Hipmunk";
+    }
+    
+    else if([appName isEqualToString:@"hipmunk-flights"]) {
+        return @"Hipmunk";
     }
     
 
@@ -392,22 +437,51 @@
         [AppSwitch launchAirbnbWithRoomID:roomID];
     }
     
-    else if([appName isEqualToString:@"spotify-artist"]) {
+    else if([appName isEqualToString:@"spotify"]) {
         NSString *artistID = [Spotify getArtistURIForQuery:query];
         [AppSwitch launchSpotifyWithArtistID:artistID];
     }
     
-    else if([appName isEqualToString:@"rdio-artist"]) {
+    else if([appName isEqualToString:@"rdio"]) {
         //
     }
     
-    else if([appName isEqualToString:@"genius-artist"]) {
+    else if([appName isEqualToString:@"genius"]) {
         NSString *artistID = [Genius getArtistIDForQuery:query];
         [AppSwitch launchGeniusWithArtistID:artistID];
     }
     
+    else if([appName isEqualToString:@"hipmunk-hotels"]) {
+        [AppSwitch launchHipmunkHotelsSearch];
+    }
+    
+    else if([appName isEqualToString:@"hipmunk-flights"]) {
+        [AppSwitch launchHipmunkFlightSearch];
+    }
+    
     else ;
 
+}
+
+-(NSString *)getUberETA {
+    
+    NSString *urlString = [NSString stringWithFormat:@"104.131.208.31:5000/nearest_uber?latitude=%f&longitude=%f", latitude, longitude];
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    
+    NSData *data = [NSURLConnection sendSynchronousRequest:request
+                                         returningResponse:nil
+                                                     error:nil];
+    
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                         options:0
+                                                           error:nil];
+    
+ 
+    return [json objectForKey:@"eta"];
+    
 }
 
 - (NSArray *) seq_context_query:(NSString *)query {
@@ -424,16 +498,8 @@
     
 }
 
--(void)witDidGraspIntent:(NSString *)intent entities:(NSDictionary *)entities body:(NSString *)body error:(NSError *)e {
-    if (e) {
-        NSLog(@"[Wit] error: %@", [e localizedDescription]);
-        return;
-    }
-    
-    labelView.text = [NSString stringWithFormat:@"intent = %@", intent];
-    
-    [self.view addSubview:labelView];
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
-
 
 @end

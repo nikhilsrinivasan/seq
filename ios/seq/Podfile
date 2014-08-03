@@ -1,0 +1,9 @@
+platform :ios, "7.1"
+
+target "seq.temp_caseinsensitive_rename" do
+pod 'Wit', '~> 1.2.0'
+end
+
+target "seq.temp_caseinsensitive_renameTests" do
+
+end

@@ -44,7 +44,7 @@
         resp = @"failed";
     }
     
-    return [[NSArray alloc]initWithObjects:resp, nil];
+    return [[NSArray alloc]initWithObjects:resp, [[[[[json objectForKey:@"results"] objectForKey:@"collection1"] objectAtIndex:0] objectForKey:@"title"] objectForKey:@"text"], nil];
     
 }
 

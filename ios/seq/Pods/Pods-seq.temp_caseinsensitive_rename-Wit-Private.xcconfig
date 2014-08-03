@@ -1,0 +1,5 @@
+#include "Pods-seq.temp_caseinsensitive_rename-Wit.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/Wit" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Wit"
+OTHER_LDFLAGS = -ObjC ${PODS_SEQ_TEMP_CASEINSENSITIVE_RENAME_WIT_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}
