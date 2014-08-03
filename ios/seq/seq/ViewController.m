@@ -38,7 +38,7 @@ static float longitude;
     tableView.alpha = 0;
     self.tableView.separatorColor = [UIColor clearColor];
     
-    [tableView setScrollEnabled:NO];
+   // [tableView setScrollEnabled:NO];
     
     [tableView setSeparatorInset:UIEdgeInsetsZero];
     
@@ -46,6 +46,11 @@ static float longitude;
     
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[UIColor whiteColor]];
     
+    [searchBar setBackgroundColor:[UIColor colorWithRed:52/255.0 green:126/255.0 blue:170/255.0 alpha:0.44]];
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,8 +74,8 @@ static float longitude;
     longitude =newLocation.coordinate.longitude;
     latitude=newLocation.coordinate.latitude;
     
-    NSLog(@"dLongitude : %f", longitude);
-    NSLog(@"dLatitude : %f", latitude);
+    //NSLog(@"dLongitude : %f", longitude);
+    //NSLog(@"dLatitude : %f", latitude);
     
 }
 
@@ -117,6 +122,25 @@ static float longitude;
     
 }
 
+-(int)findUberCellIndexPath:(int)numRows {
+    
+    //NSLog(@"# rows in sec: %d", [tableView numberOfRowsInSection:0]);
+    
+    for(int i = 0; i < numRows; i++) {
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        
+        //NSLog(@"reuse = %@", [cell reuseIdentifier]);
+        
+        if([[cell reuseIdentifier] isEqualToString:@"uber"]) {
+            //NSLog(@"uber = %d", i);
+            return i;
+        }
+    }
+    
+    return -1;
+}
+
 -(void)refreshTable {
     
     [tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -137,19 +161,29 @@ static float longitude;
     
     else if([[searchBar text]characterAtIndex:([[searchBar text]length] - 1)] == ' ' ){
         
-        matchedContexts = [[NSArray alloc] initWithArray:[self seq_context_query:searchText]];
-        
-        [self refreshTable];
+        //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            
+            NSArray *newMatchedContexts = [self seq_context_query:searchText];
+            
+            if([newMatchedContexts isEqualToArray:matchedContexts]) ;
+            
+            else {
+                
+                matchedContexts = [[NSArray alloc] initWithArray:newMatchedContexts];
+                
+                [self refreshTable];
+            }
+       // });
     }
 }
 
--(void)preFetchResults {
+-(int)preFetchResults {
     
     // prefetch foursquare venue id
     if([matchedContexts containsObject:@"map"]) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             venueID = [Foursquare getVenueIDForSearchQuery:[searchBar text]];
-            NSLog(@"fetched %@", venueID);
+            //NSLog(@"fetched %@", venueID);
         });
     }
     
@@ -157,19 +191,39 @@ static float longitude;
     if([matchedContexts containsObject:@"stay"]) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             roomID = [[Airbnb getAirbnbRoomsForLocation:[searchBar text]]objectAtIndex:0];
-            NSLog(@"fetched %@", roomID);
+            //NSLog(@"fetched %@", roomID);
         });
         
         
     }
+    
+    int numItems = 0;
+    
+    for(int i = 0; i < matchedContexts.count; i++) {
+        numItems += [[contexts objectForKey:[matchedContexts objectAtIndex:i] ]count];
+    }
+    
+    //NSLog(@"contexts = %@", matchedContexts);
+    //NSLog(@"size = %d", numItems);
+    
+    return numItems;
+
 }
 
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
-    [self preFetchResults];
+    int numRows = [self preFetchResults];
     
-    NSLog(@"attempting change");
+    //NSLog(@"attempting change");
+    
+    
+    //NSLog(@"index = %d", index);
+  //
+    
+   // [[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]]detailTextLabel]setText:description];
+    
+    [tableView reloadData];
     
    // tableView.rowHeight = 75.0f;
 
@@ -215,7 +269,8 @@ static float longitude;
         numItems += [[contexts objectForKey:[matchedContexts objectAtIndex:i] ]count];
     }
     
-    NSLog(@"contexts = %@", matchedContexts);
+    //NSLog(@"contexts = %@", matchedContexts);
+    //NSLog(@"size = %d", numItems);
     
     return numItems;
     
@@ -237,6 +292,8 @@ static float longitude;
     NSString *appName = [contextApps objectAtIndex:[indexPath row]];
     
     UITableViewCell *cell;
+    
+    //NSLog(@"%@", appName);
     
     //cell = [tableView dequeueReusableCellWithIdentifier:appName];
     
@@ -280,7 +337,7 @@ static float longitude;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"curr height = %f", rowHeight);
+    ////NSLog(@"curr height = %f", rowHeight);
     return rowHeight;
 }
 
@@ -300,7 +357,8 @@ static float longitude;
     }
     
     else if([appName isEqualToString:@"uber"]) {
-        return @"Get here with Uber";
+        NSString *eta = [self getUberETA];
+        return [NSString stringWithFormat:@"Ready for pickup in %@ minutes", eta];
     }
     
     else if([appName isEqualToString:@"apple-maps"]) {
@@ -397,8 +455,8 @@ static float longitude;
 
 - (void)openSchemeForAppName:(NSString *)appName withQuery:(NSString *)query {
     
-    NSLog(@"opening scheme for [%@]", appName);
-    NSLog(@"with query [%@]", query);
+    //NSLog(@"opening scheme for [%@]", appName);
+    //NSLog(@"with query [%@]", query);
     
     if([appName isEqualToString:@"yelp"]) {
         [AppSwitch launchYelpWithSearchQuery:query];
@@ -428,12 +486,12 @@ static float longitude;
     }
     
     else if([appName isEqualToString:@"foursquare"]) {
-        NSLog(@"venue id = %@", venueID);
+        //NSLog(@"venue id = %@", venueID);
         [AppSwitch launchFoursquareWithVenueID:venueID];
     }
     
     else if([appName isEqualToString:@"airbnb"]) {
-        NSLog(@"room id = %@", roomID);
+        //NSLog(@"room id = %@", roomID);
         [AppSwitch launchAirbnbWithRoomID:roomID];
     }
     
@@ -452,7 +510,7 @@ static float longitude;
     }
     
     else if([appName isEqualToString:@"hipmunk-hotels"]) {
-        [AppSwitch launchHipmunkHotelsSearch];
+        [AppSwitch launchHipmunkHotelSearch];
     }
     
     else if([appName isEqualToString:@"hipmunk-flights"]) {
@@ -465,9 +523,11 @@ static float longitude;
 
 -(NSString *)getUberETA {
     
-    NSString *urlString = [NSString stringWithFormat:@"104.131.208.31:5000/nearest_uber?latitude=%f&longitude=%f", latitude, longitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://104.131.208.31:5000/nearest_uber?latitude=%f&longitude=%f", latitude, longitude];
     
     NSURL *url = [NSURL URLWithString:urlString];
+    
+   // //NSLog(@"url = %@", url);
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
@@ -479,14 +539,15 @@ static float longitude;
                                                          options:0
                                                            error:nil];
     
- 
+   // //NSLog(@"json = %@", json);
+    
     return [json objectForKey:@"eta"];
     
 }
 
 - (NSArray *) seq_context_query:(NSString *)query {
     
-    NSString *urlString = @"http://seqnlp.herokuapp.com/?q=";
+    NSString *urlString = @"http://104.131.208.31:5000/?q=";
     urlString = [urlString stringByAppendingString:[query stringByReplacingOccurrencesOfString:@" " withString:@"+"]];
     
     NSURL *url = [NSURL URLWithString:urlString];

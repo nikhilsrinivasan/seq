@@ -42,6 +42,6 @@
 
 + (void)launchHipmunkFlightSearch;
 
-+ (void)launchHipmunkHotelsSearch;
++ (void)launchHipmunkHotelSearch;
 
 @end

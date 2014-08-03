@@ -79,19 +79,22 @@
 #pragma mark Yelp
 + (void)launchYelpWithSearchQuery:(NSString *)query {
     
+    query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
     NSString *urlString = @"yelp:///search?terms=";
     urlString = [urlString stringByAppendingString:query];
     NSURL *url = [NSURL URLWithString:urlString];
     
     
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+   // if ([[UIApplication sharedApplication] canOpenURL:url]) {
         [[UIApplication sharedApplication] openURL:url];
-    }
+   /* }
     
     else {
         NSString *appStoreLink = @"itms-apps://itunes.apple.com/us/app/yelp/id284910350?mt=8";
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreLink]];
     }
+    */
     
 }
 
