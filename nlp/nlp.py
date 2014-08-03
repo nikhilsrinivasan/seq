@@ -60,14 +60,14 @@ class AddressMatcher(Matcher):
 
     re_place = "\d+\s+\w+(\s+\w+)?(\s\w+)?\s+(%s)"
     re_citystate = "\w+(\s+\w+)?(\s+\w+)?\s*,\s*(%s)"
-    
+
     def __init__(self):
         self.places = set(self.load_fragments('places.txt'))
         suffixes = self.load_fragments('street_suffixes.txt')
         self.re_place = re.compile(self.re_place % '|'.join(suffixes))
         states = self.load_fragments('states.txt')
         self.re_citystate = re.compile(self.re_citystate % '|'.join(states))
-        
+
     def does_match(self, query):
         if self.re_place.match(query.text):
             return True
@@ -86,7 +86,6 @@ class ContextEngine(object):
 
     def get_contexts(self, input_text):
         query = Query(input_text)
-        print query.words
         contexts = set()
         for matcher in self.matchers:
             if matcher.does_match(query):
