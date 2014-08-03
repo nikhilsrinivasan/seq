@@ -1,18 +1,18 @@
 //
-//  seqTests.m
-//  seqTests
+//  SeqTests.m
+//  SeqTests
 //
-//  Created by Nikhil Srinivasan on 8/2/14.
-//  Copyright (c) 2014 Bitpass, Inc. All rights reserved.
+//  Created by Neel Mouleeswaran on 8/1/14.
+//  Copyright (c) 2014 bitpass. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface seqTests : XCTestCase
+@interface SeqTests : XCTestCase
 
 @end
 
-@implementation seqTests
+@implementation SeqTests
 
 - (void)setUp
 {
