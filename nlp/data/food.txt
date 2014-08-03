@@ -1,3 +1,4 @@
+hungry
 table
 chinese
 italian
@@ -11,39 +12,45 @@ restaurant
 diner
 dining
 cafe
+dinner
+supper
+breakfast
+lunch
+brunch
 Bagels
-        Bakeries
-        Beer, Wine & Spirits
-        Breweries
-        Bubble Tea
-        Butcher
-        CSA
-        Candy Stores
-        Cheese Shops
-        Chocolatiers & Shops
-        Coffee & Tea
-        Cupcakes
-        Desserts
-        Distilleries
-        Donuts
-        Ethnic Food
-        Farmers Market
-        Food Delivery
-        Food Trucks
-        Fruits Veggies
-        Gelato
-        Grocery
-        Health Markets
-        Herbs Spices
-        Ice Cream & Frozen Yogurt
-        Internet Cafes
-        Juice Bars Smoothies
-        Meat Shops
-        Pretzels
-        Seafood Markets
-        Shaved Ice
-        Specialty Food
-        Street Vendors
-        Tea Rooms
-        Wineries
-
+Bakeries
+Beer Wine Spirits
+Breweries
+Bubble Tea
+Butcher
+CSA
+Candy Stores
+Cheese Shops
+Chocolatiers
+Coffee Tea
+Cupcakes
+Desserts
+Distilleries
+Donuts
+Ethnic Food
+Farmers Market
+Food Delivery
+Food Trucks
+Fruits Veggies
+Gelato
+Grocery
+Health Markets
+Herbs Spices
+Ice Cream Frozen Yogurt
+Internet Cafes
+Juice Bars Smoothies
+Meat
+Pretzels
+Seafood
+Shaved Ice
+Specialty Food
+Street Vendors
+Tea
+Wineries
+wine
+beer
