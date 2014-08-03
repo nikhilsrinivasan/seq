@@ -13,8 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    // Override point for customization after application launch.
+    [Wit sharedInstance].accessToken = @"XKMIY7Y47WOULDZTQXJSKQYSZ3MLQTGD"; // replace xxx by your Wit access token
     return YES;
 }
 							
