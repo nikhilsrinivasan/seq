@@ -6,13 +6,13 @@ import os
 import requests
 
 app = Flask(__name__)
-app.config['UBER_USERNAME'] = os.environ['UBER_USERNAME']
-app.config['UBER_PASSWORD'] = os.environ['UBER_PASSWORD']
 
-uber_client = UberClient(app.config['UBER_USERNAME'],
-                         UberClient.login(
-                             app.config['UBER_USERNAME'],
-                             app.config['UBER_PASSWORD']))
+uber_user = os.environ['UBER_USERNAME']
+uber_pass = os.environ['UBER_PASSWORD']
+
+uber_client = UberClient(uber_user,
+                         UberClient.login(uber_user, uber_pass))
+
 
 @app.route('/')
 def index():
