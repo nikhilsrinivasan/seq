@@ -7,6 +7,7 @@ import requests
 
 app = Flask(__name__)
 
+app.config['DEBUG'] = True
 uber_user = os.environ['UBER_USERNAME']
 uber_pass = os.environ['UBER_PASSWORD']
 
@@ -26,8 +27,8 @@ def index():
 def nearest_ubers():
 
     if not uber_client:
-        return jsonify(eat=None)
-        
+        return jsonify(eta=None)
+
     class Loc(object):
         def __init__(self, lat, lon):
             self.latitude = lat
