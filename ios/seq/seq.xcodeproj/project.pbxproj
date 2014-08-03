@@ -13,18 +13,20 @@
 		31A286D8198DA27700362ED8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31A286D6198DA27700362ED8 /* InfoPlist.strings */; };
 		31A286DA198DA27700362ED8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A286D9198DA27700362ED8 /* main.m */; };
 		31A286DE198DA27800362ED8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A286DD198DA27800362ED8 /* AppDelegate.m */; };
-		31A286E1198DA27800362ED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A286DF198DA27800362ED8 /* Main.storyboard */; };
-		31A286E4198DA27800362ED8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A286E3198DA27800362ED8 /* ViewController.m */; };
 		31A286E6198DA27800362ED8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A286E5198DA27800362ED8 /* Images.xcassets */; };
 		31A286ED198DA27800362ED8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A286EC198DA27800362ED8 /* XCTest.framework */; };
 		31A286EE198DA27800362ED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A286CD198DA27700362ED8 /* Foundation.framework */; };
 		31A286EF198DA27800362ED8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A286D1198DA27700362ED8 /* UIKit.framework */; };
 		31A286F7198DA27800362ED8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31A286F5198DA27800362ED8 /* InfoPlist.strings */; };
 		31A286F9198DA27800362ED8 /* seqTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A286F8198DA27800362ED8 /* seqTests.m */; };
-		31A28704198DA43F00362ED8 /* AppSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28703198DA43F00362ED8 /* AppSwitch.m */; };
-		31A2870C198DA46200362ED8 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28707198DA46200362ED8 /* Helpers.m */; };
-		31A2870D198DA46200362ED8 /* Airbnb.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28709198DA46200362ED8 /* Airbnb.m */; };
-		31A2870E198DA46200362ED8 /* Foursquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A2870B198DA46200362ED8 /* Foursquare.m */; };
+		31A28718198E051700362ED8 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28711198E051700362ED8 /* Helpers.m */; };
+		31A28719198E051700362ED8 /* Airbnb.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28713198E051700362ED8 /* Airbnb.m */; };
+		31A2871A198E051700362ED8 /* Foursquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28715198E051700362ED8 /* Foursquare.m */; };
+		31A2871B198E051700362ED8 /* OpenTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28717198E051700362ED8 /* OpenTable.m */; };
+		31A2871F198E052F00362ED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A2871C198E052F00362ED8 /* Main.storyboard */; };
+		31A28720198E052F00362ED8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A2871E198E052F00362ED8 /* ViewController.m */; };
+		31A28723198E143300362ED8 /* AppSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28722198E143300362ED8 /* AppSwitch.m */; };
+		31A28725198E14AD00362ED8 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A28724198E14AD00362ED8 /* launch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,23 +50,26 @@
 		31A286DB198DA27800362ED8 /* seq-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "seq-Prefix.pch"; sourceTree = "<group>"; };
 		31A286DC198DA27800362ED8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		31A286DD198DA27800362ED8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		31A286E0198DA27800362ED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		31A286E2198DA27800362ED8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		31A286E3198DA27800362ED8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		31A286E5198DA27800362ED8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		31A286EB198DA27800362ED8 /* seqTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seqTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A286EC198DA27800362ED8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		31A286F4198DA27800362ED8 /* seqTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "seqTests-Info.plist"; sourceTree = "<group>"; };
 		31A286F6198DA27800362ED8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		31A286F8198DA27800362ED8 /* seqTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = seqTests.m; sourceTree = "<group>"; };
-		31A28702198DA43F00362ED8 /* AppSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSwitch.h; sourceTree = "<group>"; };
-		31A28703198DA43F00362ED8 /* AppSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSwitch.m; sourceTree = "<group>"; };
-		31A28706198DA46200362ED8 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
-		31A28707198DA46200362ED8 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
-		31A28708198DA46200362ED8 /* Airbnb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airbnb.h; sourceTree = "<group>"; };
-		31A28709198DA46200362ED8 /* Airbnb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airbnb.m; sourceTree = "<group>"; };
-		31A2870A198DA46200362ED8 /* Foursquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare.h; sourceTree = "<group>"; };
-		31A2870B198DA46200362ED8 /* Foursquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare.m; sourceTree = "<group>"; };
+		31A28710198E051700362ED8 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		31A28711198E051700362ED8 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		31A28712198E051700362ED8 /* Airbnb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airbnb.h; sourceTree = "<group>"; };
+		31A28713198E051700362ED8 /* Airbnb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airbnb.m; sourceTree = "<group>"; };
+		31A28714198E051700362ED8 /* Foursquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare.h; sourceTree = "<group>"; };
+		31A28715198E051700362ED8 /* Foursquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare.m; sourceTree = "<group>"; };
+		31A28716198E051700362ED8 /* OpenTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTable.h; sourceTree = "<group>"; };
+		31A28717198E051700362ED8 /* OpenTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTable.m; sourceTree = "<group>"; };
+		31A2871C198E052F00362ED8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		31A2871D198E052F00362ED8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		31A2871E198E052F00362ED8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		31A28721198E143300362ED8 /* AppSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSwitch.h; sourceTree = "<group>"; };
+		31A28722198E143300362ED8 /* AppSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSwitch.m; sourceTree = "<group>"; };
+		31A28724198E14AD00362ED8 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,9 +132,10 @@
 				31A28705198DA44D00362ED8 /* AppSwitch */,
 				31A286DC198DA27800362ED8 /* AppDelegate.h */,
 				31A286DD198DA27800362ED8 /* AppDelegate.m */,
-				31A286DF198DA27800362ED8 /* Main.storyboard */,
-				31A286E2198DA27800362ED8 /* ViewController.h */,
-				31A286E3198DA27800362ED8 /* ViewController.m */,
+				31A2871C198E052F00362ED8 /* Main.storyboard */,
+				31A2871D198E052F00362ED8 /* ViewController.h */,
+				31A2871E198E052F00362ED8 /* ViewController.m */,
+				31A28726198E14B000362ED8 /* Images */,
 				31A286E5198DA27800362ED8 /* Images.xcassets */,
 				31A286D4198DA27700362ED8 /* Supporting Files */,
 			);
@@ -168,9 +174,9 @@
 		31A28705198DA44D00362ED8 /* AppSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				31A28721198E143300362ED8 /* AppSwitch.h */,
+				31A28722198E143300362ED8 /* AppSwitch.m */,
 				31A2870F198DA47000362ED8 /* Helpers */,
-				31A28702198DA43F00362ED8 /* AppSwitch.h */,
-				31A28703198DA43F00362ED8 /* AppSwitch.m */,
 			);
 			name = AppSwitch;
 			sourceTree = "<group>";
@@ -178,14 +184,24 @@
 		31A2870F198DA47000362ED8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				31A28706198DA46200362ED8 /* Helpers.h */,
-				31A28707198DA46200362ED8 /* Helpers.m */,
-				31A28708198DA46200362ED8 /* Airbnb.h */,
-				31A28709198DA46200362ED8 /* Airbnb.m */,
-				31A2870A198DA46200362ED8 /* Foursquare.h */,
-				31A2870B198DA46200362ED8 /* Foursquare.m */,
+				31A28710198E051700362ED8 /* Helpers.h */,
+				31A28711198E051700362ED8 /* Helpers.m */,
+				31A28712198E051700362ED8 /* Airbnb.h */,
+				31A28713198E051700362ED8 /* Airbnb.m */,
+				31A28714198E051700362ED8 /* Foursquare.h */,
+				31A28715198E051700362ED8 /* Foursquare.m */,
+				31A28716198E051700362ED8 /* OpenTable.h */,
+				31A28717198E051700362ED8 /* OpenTable.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		31A28726198E14B000362ED8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				31A28724198E14AD00362ED8 /* launch.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,9 +280,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A28725198E14AD00362ED8 /* launch.png in Resources */,
+				31A2871F198E052F00362ED8 /* Main.storyboard in Resources */,
 				31A286E6198DA27800362ED8 /* Images.xcassets in Resources */,
 				31A286D8198DA27700362ED8 /* InfoPlist.strings in Resources */,
-				31A286E1198DA27800362ED8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,13 +302,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31A286E4198DA27800362ED8 /* ViewController.m in Sources */,
-				31A28704198DA43F00362ED8 /* AppSwitch.m in Sources */,
-				31A2870C198DA46200362ED8 /* Helpers.m in Sources */,
+				31A2871B198E051700362ED8 /* OpenTable.m in Sources */,
+				31A28723198E143300362ED8 /* AppSwitch.m in Sources */,
+				31A28720198E052F00362ED8 /* ViewController.m in Sources */,
+				31A28718198E051700362ED8 /* Helpers.m in Sources */,
 				31A286DE198DA27800362ED8 /* AppDelegate.m in Sources */,
 				31A286DA198DA27700362ED8 /* main.m in Sources */,
-				31A2870D198DA46200362ED8 /* Airbnb.m in Sources */,
-				31A2870E198DA46200362ED8 /* Foursquare.m in Sources */,
+				31A28719198E051700362ED8 /* Airbnb.m in Sources */,
+				31A2871A198E051700362ED8 /* Foursquare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,14 +338,6 @@
 				31A286D7198DA27700362ED8 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		31A286DF198DA27800362ED8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				31A286E0198DA27800362ED8 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		31A286F5198DA27800362ED8 /* InfoPlist.strings */ = {

@@ -32,4 +32,6 @@
 
 + (void)launchAirbnbWithRoomID:(NSString *)roomID;
 
++ (void)launchOpenTableWithRestaurantCode:(NSString *)restaurantCode;
+
 @end

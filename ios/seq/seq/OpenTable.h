@@ -1,5 +1,5 @@
 //
-//  Helpers.h
+//  OpenTable.h
 //  Seq
 //
 //  Created by Neel Mouleeswaran on 8/2/14.
@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Airbnb.h"
-#import "Foursquare.h"
-#import "OpenTable.h"
 
-@interface Helpers : NSObject
+@interface OpenTable : NSObject
+
++ (NSString *)getRestaurantCodeForSearchQuery:(NSString *)query;
 
 @end

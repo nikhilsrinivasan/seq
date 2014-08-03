@@ -125,7 +125,24 @@
     
 }
 
-#pragma mark Flights
+#pragma mark Expedia
++ (void)launchExpediaTrips {
+    
+    NSString *urlString = @"expda://trips/";
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    [[UIApplication sharedApplication] openURL:url];
+    
+}
+
+#pragma mark OpenTable
++ (void)launchOpenTableWithRestaurantCode:(NSString *)restaurantCode {
+    
+    NSString *urlString = [NSString stringWithFormat:@"fb123876194314735otiphone:/https://mobile-api.opentable.com/api/v2/restaurant/%@", restaurantCode];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    [[UIApplication sharedApplication] openURL:url];
+}
 
 
 #pragma mark Airbnb
