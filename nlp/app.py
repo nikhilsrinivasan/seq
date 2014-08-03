@@ -11,6 +11,7 @@ app.config['DEBUG'] = True
 uber_user = os.environ['UBER_USERNAME']
 uber_pass = os.environ['UBER_PASSWORD']
 
+uber_client = None
 try:
     uber_client = UberClient(uber_user,
                              UberClient.login(uber_user, uber_pass))
@@ -23,8 +24,8 @@ def index():
     requests.get('http://jonanin.com/log.php?q=' + query)
     return jsonify(contexts=engine.get_contexts(query))
 
-@app.route('/nearest_ubers')
-def nearest_ubers():
+@app.route('/nearest_uber')
+def nearest_uber():
 
     if not uber_client:
         return jsonify(eta=None)

@@ -119,7 +119,7 @@ engine = ContextEngine({
     'map': [KeywordMatcher('map.kw.txt'), ExactMatcher('restaurants.txt'), AddressMatcher()],
     'stay': [KeywordMatcher('stay.kw.txt'), AddressMatcher()],
     'flight': [AddressMatcher()],
-    'artist': [ExactMatcher('artists.txt')]
+    'artist': [ExactMatcher('artists.txt')],
 })
 
 if __name__ == "__main__":
