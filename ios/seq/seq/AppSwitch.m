@@ -98,6 +98,8 @@
 #pragma mark Google Maps
 + (void)launchGoogleMapsWithSearchQuery:(NSString *)query {
     
+    query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
     NSString *urlString = @"comgooglemaps://?q=";
     urlString = [urlString stringByAppendingString:query];
     NSURL *url = [NSURL URLWithString:urlString];
@@ -117,6 +119,8 @@
 #pragma mark Apple Maps
 + (void)launchAppleMapsWithSearchQuery:(NSString *)query {
     
+    query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+        
     NSString *urlString = @"http://maps.apple.com/?q=";
     urlString = [urlString stringByAppendingString:query];
     NSURL *url = [NSURL URLWithString:urlString];
@@ -153,6 +157,71 @@
     NSURL *url = [NSURL URLWithString:urlString];
     
     [[UIApplication sharedApplication] openURL:url];
+    
+}
+
+#pragma mark Spotify
++ (void)launchSpotifyWithArtistID:(NSString *)artistURI {
+    
+    NSURL *url = [NSURL URLWithString:artistURI];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    
+    else {
+        NSString *appStoreLink = @"itms-apps://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreLink]];
+    }
+    
+}
+
++ (void)launchSpotifyWithTrackID:(NSString *)trackURI {
+    
+    NSURL *url = [NSURL URLWithString:trackURI];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    
+    else {
+        NSString *appStoreLink = @"itms-apps://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreLink]];
+    }
+    
+}
+
+#pragma mark Rdio
++ (void)launchRdio:(NSString *)trackURI {
+    
+    NSURL *url = [NSURL URLWithString:trackURI];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    
+    else {
+        NSString *appStoreLink = @"itms-apps://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreLink]];
+    }
+    
+}
+
+#pragma mark Genius
++ (void)launchGeniusWithArtistID:(NSString *)artistID {
+    
+    NSString *urlString = [NSString stringWithFormat:@"genius:/api.genius.com//search/artists/%@", artistID];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    
+    else {
+        NSString *appStoreLink = @"itms-apps://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreLink]];
+    }
+
     
 }
 

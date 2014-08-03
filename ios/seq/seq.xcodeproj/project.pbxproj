@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		319F5C68198EA5BA001DF8A5 /* gmaps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C5D198EA5BA001DF8A5 /* gmaps@2x.png */; };
+		319F5C69198EA5BA001DF8A5 /* spotify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C5E198EA5BA001DF8A5 /* spotify@2x.png */; };
+		319F5C6A198EA5BA001DF8A5 /* yelp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C5F198EA5BA001DF8A5 /* yelp@2x.png */; };
+		319F5C6B198EA5BA001DF8A5 /* amaps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C60198EA5BA001DF8A5 /* amaps@2x.png */; };
+		319F5C6C198EA5BA001DF8A5 /* lyft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C61198EA5BA001DF8A5 /* lyft@2x.png */; };
+		319F5C6D198EA5BA001DF8A5 /* rdio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C62198EA5BA001DF8A5 /* rdio@2x.png */; };
+		319F5C6E198EA5BA001DF8A5 /* foursquare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C63198EA5BA001DF8A5 /* foursquare@2x.png */; };
+		319F5C6F198EA5BA001DF8A5 /* expedia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C64198EA5BA001DF8A5 /* expedia@2x.png */; };
+		319F5C70198EA5BA001DF8A5 /* uber@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C65198EA5BA001DF8A5 /* uber@2x.png */; };
+		319F5C71198EA5BA001DF8A5 /* genius@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C66198EA5BA001DF8A5 /* genius@2x.png */; };
+		319F5C72198EA5BA001DF8A5 /* airbnb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C67198EA5BA001DF8A5 /* airbnb@2x.png */; };
+		319F5C81198EA5D3001DF8A5 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5C74198EA5D3001DF8A5 /* Helpers.m */; };
+		319F5C82198EA5D3001DF8A5 /* Airbnb.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5C76198EA5D3001DF8A5 /* Airbnb.m */; };
+		319F5C83198EA5D3001DF8A5 /* Foursquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5C78198EA5D3001DF8A5 /* Foursquare.m */; };
+		319F5C84198EA5D3001DF8A5 /* OpenTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5C7A198EA5D3001DF8A5 /* OpenTable.m */; };
+		319F5C85198EA5D3001DF8A5 /* Spotify.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5C7C198EA5D3001DF8A5 /* Spotify.m */; };
+		319F5C86198EA5D3001DF8A5 /* Rdio.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5C7E198EA5D3001DF8A5 /* Rdio.m */; };
+		319F5C87198EA5D3001DF8A5 /* Genius.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5C80198EA5D3001DF8A5 /* Genius.m */; };
+		319F5C8A198EA5E1001DF8A5 /* AppSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5C89198EA5E1001DF8A5 /* AppSwitch.m */; };
+		319F5C8C198EA5EE001DF8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 319F5C8B198EA5EE001DF8A5 /* Main.storyboard */; };
 		31A286CE198DA27700362ED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A286CD198DA27700362ED8 /* Foundation.framework */; };
 		31A286D0198DA27700362ED8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A286CF198DA27700362ED8 /* CoreGraphics.framework */; };
 		31A286D2198DA27700362ED8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A286D1198DA27700362ED8 /* UIKit.framework */; };
@@ -19,13 +39,7 @@
 		31A286EF198DA27800362ED8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A286D1198DA27700362ED8 /* UIKit.framework */; };
 		31A286F7198DA27800362ED8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31A286F5198DA27800362ED8 /* InfoPlist.strings */; };
 		31A286F9198DA27800362ED8 /* seqTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A286F8198DA27800362ED8 /* seqTests.m */; };
-		31A28718198E051700362ED8 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28711198E051700362ED8 /* Helpers.m */; };
-		31A28719198E051700362ED8 /* Airbnb.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28713198E051700362ED8 /* Airbnb.m */; };
-		31A2871A198E051700362ED8 /* Foursquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28715198E051700362ED8 /* Foursquare.m */; };
-		31A2871B198E051700362ED8 /* OpenTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28717198E051700362ED8 /* OpenTable.m */; };
-		31A2871F198E052F00362ED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A2871C198E052F00362ED8 /* Main.storyboard */; };
 		31A28720198E052F00362ED8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A2871E198E052F00362ED8 /* ViewController.m */; };
-		31A28723198E143300362ED8 /* AppSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A28722198E143300362ED8 /* AppSwitch.m */; };
 		31A28725198E14AD00362ED8 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A28724198E14AD00362ED8 /* launch.png */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +54,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		319F5C5D198EA5BA001DF8A5 /* gmaps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gmaps@2x.png"; sourceTree = "<group>"; };
+		319F5C5E198EA5BA001DF8A5 /* spotify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotify@2x.png"; sourceTree = "<group>"; };
+		319F5C5F198EA5BA001DF8A5 /* yelp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yelp@2x.png"; sourceTree = "<group>"; };
+		319F5C60198EA5BA001DF8A5 /* amaps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amaps@2x.png"; sourceTree = "<group>"; };
+		319F5C61198EA5BA001DF8A5 /* lyft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lyft@2x.png"; sourceTree = "<group>"; };
+		319F5C62198EA5BA001DF8A5 /* rdio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rdio@2x.png"; sourceTree = "<group>"; };
+		319F5C63198EA5BA001DF8A5 /* foursquare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foursquare@2x.png"; sourceTree = "<group>"; };
+		319F5C64198EA5BA001DF8A5 /* expedia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expedia@2x.png"; sourceTree = "<group>"; };
+		319F5C65198EA5BA001DF8A5 /* uber@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uber@2x.png"; sourceTree = "<group>"; };
+		319F5C66198EA5BA001DF8A5 /* genius@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "genius@2x.png"; sourceTree = "<group>"; };
+		319F5C67198EA5BA001DF8A5 /* airbnb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airbnb@2x.png"; sourceTree = "<group>"; };
+		319F5C73198EA5D3001DF8A5 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		319F5C74198EA5D3001DF8A5 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		319F5C75198EA5D3001DF8A5 /* Airbnb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airbnb.h; sourceTree = "<group>"; };
+		319F5C76198EA5D3001DF8A5 /* Airbnb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airbnb.m; sourceTree = "<group>"; };
+		319F5C77198EA5D3001DF8A5 /* Foursquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare.h; sourceTree = "<group>"; };
+		319F5C78198EA5D3001DF8A5 /* Foursquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare.m; sourceTree = "<group>"; };
+		319F5C79198EA5D3001DF8A5 /* OpenTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTable.h; sourceTree = "<group>"; };
+		319F5C7A198EA5D3001DF8A5 /* OpenTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTable.m; sourceTree = "<group>"; };
+		319F5C7B198EA5D3001DF8A5 /* Spotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
+		319F5C7C198EA5D3001DF8A5 /* Spotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spotify.m; sourceTree = "<group>"; };
+		319F5C7D198EA5D3001DF8A5 /* Rdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rdio.h; sourceTree = "<group>"; };
+		319F5C7E198EA5D3001DF8A5 /* Rdio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rdio.m; sourceTree = "<group>"; };
+		319F5C7F198EA5D3001DF8A5 /* Genius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genius.h; sourceTree = "<group>"; };
+		319F5C80198EA5D3001DF8A5 /* Genius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Genius.m; sourceTree = "<group>"; };
+		319F5C88198EA5E1001DF8A5 /* AppSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSwitch.h; sourceTree = "<group>"; };
+		319F5C89198EA5E1001DF8A5 /* AppSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSwitch.m; sourceTree = "<group>"; };
+		319F5C8B198EA5EE001DF8A5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		31A286CA198DA27700362ED8 /* seq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A286CD198DA27700362ED8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		31A286CF198DA27700362ED8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,19 +98,8 @@
 		31A286F4198DA27800362ED8 /* seqTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "seqTests-Info.plist"; sourceTree = "<group>"; };
 		31A286F6198DA27800362ED8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		31A286F8198DA27800362ED8 /* seqTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = seqTests.m; sourceTree = "<group>"; };
-		31A28710198E051700362ED8 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
-		31A28711198E051700362ED8 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
-		31A28712198E051700362ED8 /* Airbnb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airbnb.h; sourceTree = "<group>"; };
-		31A28713198E051700362ED8 /* Airbnb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airbnb.m; sourceTree = "<group>"; };
-		31A28714198E051700362ED8 /* Foursquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare.h; sourceTree = "<group>"; };
-		31A28715198E051700362ED8 /* Foursquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare.m; sourceTree = "<group>"; };
-		31A28716198E051700362ED8 /* OpenTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTable.h; sourceTree = "<group>"; };
-		31A28717198E051700362ED8 /* OpenTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTable.m; sourceTree = "<group>"; };
-		31A2871C198E052F00362ED8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		31A2871D198E052F00362ED8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		31A2871E198E052F00362ED8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		31A28721198E143300362ED8 /* AppSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSwitch.h; sourceTree = "<group>"; };
-		31A28722198E143300362ED8 /* AppSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSwitch.m; sourceTree = "<group>"; };
 		31A28724198E14AD00362ED8 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,12 +160,12 @@
 		31A286D3198DA27700362ED8 /* seq */ = {
 			isa = PBXGroup;
 			children = (
-				31A28705198DA44D00362ED8 /* AppSwitch */,
 				31A286DC198DA27800362ED8 /* AppDelegate.h */,
 				31A286DD198DA27800362ED8 /* AppDelegate.m */,
-				31A2871C198E052F00362ED8 /* Main.storyboard */,
 				31A2871D198E052F00362ED8 /* ViewController.h */,
 				31A2871E198E052F00362ED8 /* ViewController.m */,
+				319F5C8B198EA5EE001DF8A5 /* Main.storyboard */,
+				31A28705198DA44D00362ED8 /* AppSwitch */,
 				31A28726198E14B000362ED8 /* Images */,
 				31A286E5198DA27800362ED8 /* Images.xcassets */,
 				31A286D4198DA27700362ED8 /* Supporting Files */,
@@ -174,8 +205,8 @@
 		31A28705198DA44D00362ED8 /* AppSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				31A28721198E143300362ED8 /* AppSwitch.h */,
-				31A28722198E143300362ED8 /* AppSwitch.m */,
+				319F5C88198EA5E1001DF8A5 /* AppSwitch.h */,
+				319F5C89198EA5E1001DF8A5 /* AppSwitch.m */,
 				31A2870F198DA47000362ED8 /* Helpers */,
 			);
 			name = AppSwitch;
@@ -184,14 +215,20 @@
 		31A2870F198DA47000362ED8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				31A28710198E051700362ED8 /* Helpers.h */,
-				31A28711198E051700362ED8 /* Helpers.m */,
-				31A28712198E051700362ED8 /* Airbnb.h */,
-				31A28713198E051700362ED8 /* Airbnb.m */,
-				31A28714198E051700362ED8 /* Foursquare.h */,
-				31A28715198E051700362ED8 /* Foursquare.m */,
-				31A28716198E051700362ED8 /* OpenTable.h */,
-				31A28717198E051700362ED8 /* OpenTable.m */,
+				319F5C73198EA5D3001DF8A5 /* Helpers.h */,
+				319F5C74198EA5D3001DF8A5 /* Helpers.m */,
+				319F5C75198EA5D3001DF8A5 /* Airbnb.h */,
+				319F5C76198EA5D3001DF8A5 /* Airbnb.m */,
+				319F5C77198EA5D3001DF8A5 /* Foursquare.h */,
+				319F5C78198EA5D3001DF8A5 /* Foursquare.m */,
+				319F5C79198EA5D3001DF8A5 /* OpenTable.h */,
+				319F5C7A198EA5D3001DF8A5 /* OpenTable.m */,
+				319F5C7B198EA5D3001DF8A5 /* Spotify.h */,
+				319F5C7C198EA5D3001DF8A5 /* Spotify.m */,
+				319F5C7D198EA5D3001DF8A5 /* Rdio.h */,
+				319F5C7E198EA5D3001DF8A5 /* Rdio.m */,
+				319F5C7F198EA5D3001DF8A5 /* Genius.h */,
+				319F5C80198EA5D3001DF8A5 /* Genius.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -199,6 +236,17 @@
 		31A28726198E14B000362ED8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				319F5C5D198EA5BA001DF8A5 /* gmaps@2x.png */,
+				319F5C5E198EA5BA001DF8A5 /* spotify@2x.png */,
+				319F5C5F198EA5BA001DF8A5 /* yelp@2x.png */,
+				319F5C60198EA5BA001DF8A5 /* amaps@2x.png */,
+				319F5C61198EA5BA001DF8A5 /* lyft@2x.png */,
+				319F5C62198EA5BA001DF8A5 /* rdio@2x.png */,
+				319F5C63198EA5BA001DF8A5 /* foursquare@2x.png */,
+				319F5C64198EA5BA001DF8A5 /* expedia@2x.png */,
+				319F5C65198EA5BA001DF8A5 /* uber@2x.png */,
+				319F5C66198EA5BA001DF8A5 /* genius@2x.png */,
+				319F5C67198EA5BA001DF8A5 /* airbnb@2x.png */,
 				31A28724198E14AD00362ED8 /* launch.png */,
 			);
 			name = Images;
@@ -281,9 +329,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A28725198E14AD00362ED8 /* launch.png in Resources */,
-				31A2871F198E052F00362ED8 /* Main.storyboard in Resources */,
+				319F5C71198EA5BA001DF8A5 /* genius@2x.png in Resources */,
+				319F5C69198EA5BA001DF8A5 /* spotify@2x.png in Resources */,
+				319F5C72198EA5BA001DF8A5 /* airbnb@2x.png in Resources */,
+				319F5C6B198EA5BA001DF8A5 /* amaps@2x.png in Resources */,
+				319F5C68198EA5BA001DF8A5 /* gmaps@2x.png in Resources */,
+				319F5C8C198EA5EE001DF8A5 /* Main.storyboard in Resources */,
+				319F5C6C198EA5BA001DF8A5 /* lyft@2x.png in Resources */,
+				319F5C6D198EA5BA001DF8A5 /* rdio@2x.png in Resources */,
 				31A286E6198DA27800362ED8 /* Images.xcassets in Resources */,
+				319F5C6A198EA5BA001DF8A5 /* yelp@2x.png in Resources */,
+				319F5C70198EA5BA001DF8A5 /* uber@2x.png in Resources */,
 				31A286D8198DA27700362ED8 /* InfoPlist.strings in Resources */,
+				319F5C6E198EA5BA001DF8A5 /* foursquare@2x.png in Resources */,
+				319F5C6F198EA5BA001DF8A5 /* expedia@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +361,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31A2871B198E051700362ED8 /* OpenTable.m in Sources */,
-				31A28723198E143300362ED8 /* AppSwitch.m in Sources */,
+				319F5C84198EA5D3001DF8A5 /* OpenTable.m in Sources */,
 				31A28720198E052F00362ED8 /* ViewController.m in Sources */,
-				31A28718198E051700362ED8 /* Helpers.m in Sources */,
+				319F5C81198EA5D3001DF8A5 /* Helpers.m in Sources */,
 				31A286DE198DA27800362ED8 /* AppDelegate.m in Sources */,
+				319F5C86198EA5D3001DF8A5 /* Rdio.m in Sources */,
 				31A286DA198DA27700362ED8 /* main.m in Sources */,
-				31A28719198E051700362ED8 /* Airbnb.m in Sources */,
-				31A2871A198E051700362ED8 /* Foursquare.m in Sources */,
+				319F5C8A198EA5E1001DF8A5 /* AppSwitch.m in Sources */,
+				319F5C82198EA5D3001DF8A5 /* Airbnb.m in Sources */,
+				319F5C83198EA5D3001DF8A5 /* Foursquare.m in Sources */,
+				319F5C87198EA5D3001DF8A5 /* Genius.m in Sources */,
+				319F5C85198EA5D3001DF8A5 /* Spotify.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

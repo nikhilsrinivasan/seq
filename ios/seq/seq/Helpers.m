@@ -7,8 +7,6 @@
 //
 
 #import "Helpers.h"
-#import "Airbnb.h"
-#import "Foursquare.h"
 
 @implementation Helpers
 

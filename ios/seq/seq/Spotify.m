@@ -1,20 +1,20 @@
 //
-//  Foursquare.m
+//  Spotify.m
 //  Seq
 //
-//  Created by Neel Mouleeswaran on 8/1/14.
+//  Created by Neel Mouleeswaran on 8/2/14.
 //  Copyright (c) 2014 bitpass. All rights reserved.
 //
 
-#import "Foursquare.h"
+#import "Spotify.h"
 
-@implementation Foursquare
+@implementation Spotify
 
-+ (NSString *)getVenueIDForSearchQuery:(NSString *)query {
++ (NSString *)getArtistURIForQuery:(NSString *)query {
     
     query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
-    NSString *urlString = @"https://api.foursquare.com/v2/venues/search?client_id=ID0M2P2LLYGILAVBFKPPIRXBEQQKGNX0BY0OA3ARA0CZ5OFS&client_secret=MEIB4RRW3OFJXKL2FLMETRQM3TZ1LCXSH3HIZ5FXE3T0XQEA&v=20130815&near=mountain+view&query=";
+    NSString *urlString = @"http://ws.spotify.com/search/1/artist.json?q=";
     
     urlString = [urlString stringByAppendingString:query];
     
@@ -30,22 +30,19 @@
                                                          options:0
                                                            error:nil];
     
-    NSString *ret;
+    NSLog(@"%@", [[[[json objectForKey:@"response"]objectForKey:@"artists"]objectAtIndex:0]objectForKey:@"href"]);
     
-    @try {
-        ret = [[[[json objectForKey:@"response"]objectForKey:@"venues"]objectAtIndex:0]objectForKey:@"id"];
-    }
-    @catch (NSException * e) {
-        ret = @"failed";
-    }
-    
-    return ret;
+    NSLog(@"json = %@", [json allKeys]);
 
+    return [[[json objectForKey:@"artists"]objectAtIndex:0]objectForKey:@"href"];
+    
 }
 
-+ (NSString *)getUserIDForSearchQuery:(NSString *)query {
++ (NSString *)getTrackURIForQuery:(NSString *)query {
     
-    NSString *urlString = @"https://api.foursquare.com/v2/users/search?client_id=ID0M2P2LLYGILAVBFKPPIRXBEQQKGNX0BY0OA3ARA0CZ5OFS&client_secret=MEIB4RRW3OFJXKL2FLMETRQM3TZ1LCXSH3HIZ5FXE3T0XQEA&v=20130815&near=mountain+view&query=";
+    query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    NSString *urlString = @"http://ws.spotify.com/search/1/artist.json?q=";
     
     urlString = [urlString stringByAppendingString:query];
     
@@ -61,9 +58,12 @@
                                                          options:0
                                                            error:nil];
     
+    NSLog(@"%@", [[[[json objectForKey:@"response"]objectForKey:@"artists"]objectAtIndex:0]objectForKey:@"href"]);
     
-    return [[[[json objectForKey:@"response"]objectForKey:@"users"]objectAtIndex:0]objectForKey:@"id"];
+    return [[[json objectForKey:@"artists"]objectAtIndex:0]objectForKey:@"href"];
     
 }
+
+
 
 @end

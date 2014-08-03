@@ -34,4 +34,10 @@
 
 + (void)launchOpenTableWithRestaurantCode:(NSString *)restaurantCode;
 
++ (void)launchSpotifyWithArtistID:(NSString *)artistURI;
+
++ (void)launchSpotifyWithTrackID:(NSString *)trackURI;
+
++ (void)launchGeniusWithArtistID:(NSString *)artistID;
+
 @end
