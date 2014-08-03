@@ -1,21 +1,21 @@
 //
-//  AppDelegate.m
-//  wit.ai
+//  FOOAppDelegate.m
+//  WitHelloWorld
 //
-//  Created by Nikhil Srinivasan on 8/3/14.
-//  Copyright (c) 2014 Bitpass, Inc. All rights reserved.
+//  Created by Willy Blandin on 13/04/2014.
+//  Copyright (c) 2014 Wit.AI. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "FOOAppDelegate.h"
 
-@implementation AppDelegate
+@implementation FOOAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Wit sharedInstance].accessToken = @"XKMIY7Y47WOULDZTQXJSKQYSZ3MLQTGD"; // replace xxx by your Wit.AI access token
+    [Wit sharedInstance].accessToken = @"XKMIY7Y47WOULDZTQXJSKQYSZ3MLQTGD"; // replace xxx by your Wit access token
     return YES;
 }
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
