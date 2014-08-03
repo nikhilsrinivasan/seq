@@ -1,9 +1,9 @@
 
 import nltk
-from os importp path
+from os import path
 from nltk.tokenize import word_tokenize
 
-nltk.data.path.append(path.join(path.dirname(__file__), 'nltk_data/')
+nltk.data.path.append(path.join(path.dirname(__file__), 'nltk_data/'))
 
 # food ride map stay
 
