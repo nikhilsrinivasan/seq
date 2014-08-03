@@ -65,7 +65,7 @@ class ContextEngine(object):
         for matcher in self.matchers:
             if matcher.does_match(query):
                 contexts |= matcher.contexts
-        return contexts
+        return list(contexts)
 
 def make_cache(cls):
     cache = {}
