@@ -2,10 +2,12 @@
 from flask import Flask, jsonify, request
 from nlp import engine
 from uber import UberClient
+import os
 import requests
 
 app = Flask(__name__)
-app.config.from_object('config')
+app.config['UBER_USERNAME'] = os.environ['UBER_USERNAME']
+app.config['UBER_PASSWORD'] = os.environ['UBER_PASSWORD']
 
 uber_client = UberClient(app.config['UBER_USERNAME'],
                          UberClient.login(
