@@ -10,6 +10,9 @@
 #import "Airbnb.h"
 #import "Foursquare.h"
 #import "OpenTable.h"
+#import "Spotify.h"
+#import "Rdio.h"
+#import "Genius.h"
 
 @interface Helpers : NSObject
 

@@ -12,6 +12,8 @@
 
 + (NSString *)getVenueIDForSearchQuery:(NSString *)query {
     
+    query = [query stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
     NSString *urlString = @"https://api.foursquare.com/v2/venues/search?client_id=ID0M2P2LLYGILAVBFKPPIRXBEQQKGNX0BY0OA3ARA0CZ5OFS&client_secret=MEIB4RRW3OFJXKL2FLMETRQM3TZ1LCXSH3HIZ5FXE3T0XQEA&v=20130815&near=mountain+view&query=";
     
     urlString = [urlString stringByAppendingString:query];
@@ -28,8 +30,16 @@
                                                          options:0
                                                            error:nil];
     
+    NSString *ret;
     
-    return [[[[json objectForKey:@"response"]objectForKey:@"venues"]objectAtIndex:0]objectForKey:@"id"];
+    @try {
+        ret = [[[[json objectForKey:@"response"]objectForKey:@"venues"]objectAtIndex:0]objectForKey:@"id"];
+    }
+    @catch (NSException * e) {
+        ret = @"failed";
+    }
+    
+    return ret;
 
 }
 

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>seq.xcscheme</key>
+		<key>seq.temp_caseinsensitive_rename.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>31A286C9198DA27700362ED8</key>
+		<key>20F2994B198C1EC30079F79F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31A286EA198DA27800362ED8</key>
+		<key>20F2996C198C1EC40079F79F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
