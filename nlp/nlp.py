@@ -47,6 +47,7 @@ class ExactMatcher(Matcher):
     def __init__(self, fn):
         lines = self.load_data_file(fn).split('\n')
         self.strings = set([line.strip().lower() for line in lines])
+        self.strings.remove("")
 
     def does_match(self, query):
         return query.text in self.strings
