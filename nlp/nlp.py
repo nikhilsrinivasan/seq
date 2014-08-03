@@ -1,4 +1,5 @@
 
+import re
 import nltk
 from os import path
 from nltk.tokenize import word_tokenize
@@ -30,6 +31,9 @@ class Matcher(object):
         with open(fn, 'r') as f:
             return f.read()
 
+    def load_fragments(self, fn):
+        return self.load_data_file(fn).lower().strip().split()
+
     def does_match(self, query):
         """ implement this in subclasses """
         return False
@@ -52,6 +56,26 @@ class ExactMatcher(Matcher):
     def does_match(self, query):
         return query.text in self.strings
 
+class AddressMatcher(Matcher):
+
+    re_place = "\d+\s+\w+(\s+\w+)?(\s\w+)?\s+(%s)"
+    re_citystate = "\w+(\s+\w+)?(\s+\w+)?\s*,\s*(%s)"
+    
+    def __init__(self):
+        self.places = set(self.load_fragments('places.txt'))
+        suffixes = self.load_fragments('street_suffixes.txt')
+        self.re_place = re.compile(self.re_place % '|'.join(suffixes))
+        states = self.load_fragments('states.txt')
+        self.re_citystate = re.compile(self.re_citystate % '|'.join(states))
+        
+    def does_match(self, query):
+        if self.re_place.match(query.text):
+            return True
+        if self.re_citystate.match(query.text):
+            return True
+        if query.text in self.places:
+            return True
+
 class ContextEngine(object):
     def __init__(self, config):
         self.matchers = set()
@@ -62,6 +86,7 @@ class ContextEngine(object):
 
     def get_contexts(self, input_text):
         query = Query(input_text)
+        print query.words
         contexts = set()
         for matcher in self.matchers:
             if matcher.does_match(query):
@@ -79,14 +104,21 @@ def make_cache(cls):
         return obj
     return wrapper
 
+def make_singleton(cls):
+    inst = cls()
+    def wrapper():
+        return inst
+    return wrapper
+
 KeywordMatcher = make_cache(KeywordMatcher)
 ExactMatcher = make_cache(ExactMatcher)
+AddressMatcher = make_singleton(AddressMatcher)
 
 engine = ContextEngine({
     'food': [KeywordMatcher('food.kw.txt'), ExactMatcher('restaurants.txt')],
     'ride': [KeywordMatcher('ride.kw.txt')],
-    'map': [KeywordMatcher('map.kw.txt'), ExactMatcher('restaurants.txt')],
-    'stay': [KeywordMatcher('stay.kw.txt')],
+    'map': [KeywordMatcher('map.kw.txt'), ExactMatcher('restaurants.txt'), AddressMatcher()],
+    'stay': [KeywordMatcher('stay.kw.txt'), AddressMatcher()],
     'artist': [ExactMatcher('artists.txt')]
 })
 

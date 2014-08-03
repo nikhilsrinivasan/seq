@@ -19,14 +19,14 @@ lunch
 brunch
 Bagels
 Bakeries
-Beer, Wine & Spirits
+Beer Wine Spirits
 Breweries
 Bubble Tea
 Butcher
 CSA
-Candy Stores
-Cheese Shops
-Chocolatiers Shops
+Candy
+Cheese
+Chocolatiers
 Coffee Tea
 Cupcakes
 Desserts
@@ -37,6 +37,7 @@ Farmers Market
 Food Delivery
 Food Trucks
 Fruits Veggies
+vegetables
 Gelato
 Grocery
 Health Markets
@@ -47,7 +48,6 @@ Juice Bars Smoothies
 Meat
 Pretzels
 Seafood
-Shaved Ice
 Specialty Food
 Street Vendors
 Tea
