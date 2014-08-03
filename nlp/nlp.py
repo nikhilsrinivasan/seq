@@ -115,7 +115,7 @@ AddressMatcher = make_singleton(AddressMatcher)
 
 engine = ContextEngine({
     'food': [KeywordMatcher('food.kw.txt'), ExactMatcher('restaurants.txt')],
-    'ride': [KeywordMatcher('ride.kw.txt')],
+    'ride': [KeywordMatcher('ride.kw.txt'), AddressMatcher()],
     'map': [KeywordMatcher('map.kw.txt'), ExactMatcher('restaurants.txt'), AddressMatcher()],
     'stay': [KeywordMatcher('stay.kw.txt'), AddressMatcher()],
     'flight': [KeywordMatcher('flight.kw.txt'), AddressMatcher()],
