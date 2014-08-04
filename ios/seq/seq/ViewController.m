@@ -35,6 +35,8 @@ static float longitude;
     
     [super viewDidLoad];
     
+    [Wit sharedInstance].delegate = self;
+
     tableView.alpha = 0;
     self.tableView.separatorColor = [UIColor clearColor];
     

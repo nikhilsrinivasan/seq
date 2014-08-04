@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate> {
+@interface ViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, WitDelegate> {
     NSMutableDictionary *contexts;
     NSArray *matchedContexts;
     
