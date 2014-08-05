@@ -345,7 +345,7 @@ static float longitude;
     
     if([appName isEqualToString:@"yelp"]) {
         //return [NSString stringWithFormat:@"Find reviews for %@", [searchBar text]];
-        return @"Find reviews on yelp";
+        return @"Find restaurant reviews on yelp";
     }
     
     else if([appName isEqualToString:@"opentable"]) {
@@ -353,7 +353,7 @@ static float longitude;
     }
     
     else if([appName isEqualToString:@"lyft"]) {
-        return @"Get here with Lyft";
+        return @"Get there with Lyft";
     }
     
     else if([appName isEqualToString:@"uber"]) {
@@ -362,19 +362,19 @@ static float longitude;
     }
     
     else if([appName isEqualToString:@"apple-maps"]) {
-        return @"Get directions with Apple maps";
+        return @"Get directions with Apple Maps";
     }
     
     else if([appName isEqualToString:@"google-maps"]) {
-        return @"Get directions with google maps";
+        return @"Get directions with Google Maps";
     }
     
     else if([appName isEqualToString:@"airbnb"]) {
-        return @"Find a place to stay with airbnb";
+        return @"Find a place to stay with Airbnb";
     }
     
     else if([appName isEqualToString:@"foursquare"]) {
-        return @"Open this place in foursquare";
+        return @"Open this place in Foursquare";
     }
     
     else if([appName isEqualToString:@"hipmunk-hotels"]) {
@@ -385,6 +385,18 @@ static float longitude;
         return @"Book a flight with Hipmunk";
     }
     
+    else if([appName isEqualToString:@"spotify"]) {
+        return @"Listen to this artist on Spotify";
+    }
+    
+    else if([appName isEqualToString:@"rdio"]) {
+        return @"Listen to this artist on Rdio";
+    }
+    
+    else if([appName isEqualToString:@"genius"]) {
+        return @"Find annotated lyrics and more on Genius";
+    }
+
     else ;
     
     return nil;
@@ -547,13 +559,15 @@ static float longitude;
 
 - (NSArray *) seq_context_query:(NSString *)query {
     
-    NSString *urlString = @"http://104.131.208.31:5000/?q=";
+    NSString *urlString = @"http://seqnlp.herokuapp.com/?q=";
     urlString = [urlString stringByAppendingString:[query stringByReplacingOccurrencesOfString:@" " withString:@"+"]];
     
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    NSLog(@"response = %@", json);
     
     return [json objectForKey:@"contexts"];
     
