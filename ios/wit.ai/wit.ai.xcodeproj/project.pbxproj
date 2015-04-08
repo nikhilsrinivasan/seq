@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C2A0A7FC35D4F3A9EC5E2B5 /* libPods-wit.ai.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FA49C3A26A433780BC3121 /* libPods-wit.ai.a */; };
+		319F5CDB198EAAAE001DF8A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319F5CDA198EAAAE001DF8A5 /* Foundation.framework */; };
+		319F5CDD198EAAAE001DF8A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319F5CDC198EAAAE001DF8A5 /* CoreGraphics.framework */; };
+		319F5CDF198EAAAE001DF8A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319F5CDE198EAAAE001DF8A5 /* UIKit.framework */; };
+		319F5CE5198EAAAE001DF8A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 319F5CE3198EAAAE001DF8A5 /* InfoPlist.strings */; };
+		319F5CE7198EAAAE001DF8A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5CE6198EAAAE001DF8A5 /* main.m */; };
+		319F5CF3198EAAAE001DF8A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 319F5CF2198EAAAE001DF8A5 /* Images.xcassets */; };
+		319F5CFA198EAAAE001DF8A5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319F5CF9198EAAAE001DF8A5 /* XCTest.framework */; };
+		319F5CFB198EAAAE001DF8A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319F5CDA198EAAAE001DF8A5 /* Foundation.framework */; };
+		319F5CFC198EAAAE001DF8A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319F5CDE198EAAAE001DF8A5 /* UIKit.framework */; };
+		319F5D04198EAAAE001DF8A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 319F5D02198EAAAE001DF8A5 /* InfoPlist.strings */; };
+		319F5D06198EAAAE001DF8A5 /* wit_aiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5D05198EAAAE001DF8A5 /* wit_aiTests.m */; };
+		319F5D14198EAFFA001DF8A5 /* FOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5D10198EAFFA001DF8A5 /* FOOAppDelegate.m */; };
+		319F5D15198EAFFA001DF8A5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 319F5D11198EAFFA001DF8A5 /* Main_iPhone.storyboard */; };
+		319F5D16198EAFFA001DF8A5 /* FOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 319F5D13198EAFFA001DF8A5 /* FOOViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		319F5CFD198EAAAE001DF8A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 319F5CCF198EAAAE001DF8A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 319F5CD6198EAAAE001DF8A5;
+			remoteInfo = wit.ai;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		187FC7FB85974B168950A0D2 /* Pods-wit.ai.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wit.ai.xcconfig"; path = "Pods/Pods-wit.ai.xcconfig"; sourceTree = "<group>"; };
+		319F5CD7198EAAAE001DF8A5 /* wit.ai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wit.ai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		319F5CDA198EAAAE001DF8A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		319F5CDC198EAAAE001DF8A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		319F5CDE198EAAAE001DF8A5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		319F5CE2198EAAAE001DF8A5 /* wit.ai-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wit.ai-Info.plist"; sourceTree = "<group>"; };
+		319F5CE4198EAAAE001DF8A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		319F5CE6198EAAAE001DF8A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		319F5CE8198EAAAE001DF8A5 /* wit.ai-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wit.ai-Prefix.pch"; sourceTree = "<group>"; };
+		319F5CF2198EAAAE001DF8A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		319F5CF8198EAAAE001DF8A5 /* wit.aiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wit.aiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		319F5CF9198EAAAE001DF8A5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		319F5D01198EAAAE001DF8A5 /* wit.aiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wit.aiTests-Info.plist"; sourceTree = "<group>"; };
+		319F5D03198EAAAE001DF8A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		319F5D05198EAAAE001DF8A5 /* wit_aiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wit_aiTests.m; sourceTree = "<group>"; };
+		319F5D0F198EAFFA001DF8A5 /* FOOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOOAppDelegate.h; sourceTree = "<group>"; };
+		319F5D10198EAFFA001DF8A5 /* FOOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOOAppDelegate.m; sourceTree = "<group>"; };
+		319F5D11198EAFFA001DF8A5 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		319F5D12198EAFFA001DF8A5 /* FOOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOOViewController.h; sourceTree = "<group>"; };
+		319F5D13198EAFFA001DF8A5 /* FOOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOOViewController.m; sourceTree = "<group>"; };
+		A2FA49C3A26A433780BC3121 /* libPods-wit.ai.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wit.ai.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		319F5CD4198EAAAE001DF8A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319F5CDD198EAAAE001DF8A5 /* CoreGraphics.framework in Frameworks */,
+				319F5CDF198EAAAE001DF8A5 /* UIKit.framework in Frameworks */,
+				319F5CDB198EAAAE001DF8A5 /* Foundation.framework in Frameworks */,
+				0C2A0A7FC35D4F3A9EC5E2B5 /* libPods-wit.ai.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		319F5CF5198EAAAE001DF8A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319F5CFA198EAAAE001DF8A5 /* XCTest.framework in Frameworks */,
+				319F5CFC198EAAAE001DF8A5 /* UIKit.framework in Frameworks */,
+				319F5CFB198EAAAE001DF8A5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		319F5CCE198EAAAE001DF8A5 = {
+			isa = PBXGroup;
+			children = (
+				319F5CE0198EAAAE001DF8A5 /* wit.ai */,
+				319F5CFF198EAAAE001DF8A5 /* wit.aiTests */,
+				319F5CD9198EAAAE001DF8A5 /* Frameworks */,
+				319F5CD8198EAAAE001DF8A5 /* Products */,
+				187FC7FB85974B168950A0D2 /* Pods-wit.ai.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		319F5CD8198EAAAE001DF8A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				319F5CD7198EAAAE001DF8A5 /* wit.ai.app */,
+				319F5CF8198EAAAE001DF8A5 /* wit.aiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		319F5CD9198EAAAE001DF8A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				319F5CDA198EAAAE001DF8A5 /* Foundation.framework */,
+				319F5CDC198EAAAE001DF8A5 /* CoreGraphics.framework */,
+				319F5CDE198EAAAE001DF8A5 /* UIKit.framework */,
+				319F5CF9198EAAAE001DF8A5 /* XCTest.framework */,
+				A2FA49C3A26A433780BC3121 /* libPods-wit.ai.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		319F5CE0198EAAAE001DF8A5 /* wit.ai */ = {
+			isa = PBXGroup;
+			children = (
+				319F5D0F198EAFFA001DF8A5 /* FOOAppDelegate.h */,
+				319F5D10198EAFFA001DF8A5 /* FOOAppDelegate.m */,
+				319F5D11198EAFFA001DF8A5 /* Main_iPhone.storyboard */,
+				319F5D12198EAFFA001DF8A5 /* FOOViewController.h */,
+				319F5D13198EAFFA001DF8A5 /* FOOViewController.m */,
+				319F5CF2198EAAAE001DF8A5 /* Images.xcassets */,
+				319F5CE1198EAAAE001DF8A5 /* Supporting Files */,
+			);
+			path = wit.ai;
+			sourceTree = "<group>";
+		};
+		319F5CE1198EAAAE001DF8A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				319F5CE2198EAAAE001DF8A5 /* wit.ai-Info.plist */,
+				319F5CE3198EAAAE001DF8A5 /* InfoPlist.strings */,
+				319F5CE6198EAAAE001DF8A5 /* main.m */,
+				319F5CE8198EAAAE001DF8A5 /* wit.ai-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		319F5CFF198EAAAE001DF8A5 /* wit.aiTests */ = {
+			isa = PBXGroup;
+			children = (
+				319F5D05198EAAAE001DF8A5 /* wit_aiTests.m */,
+				319F5D00198EAAAE001DF8A5 /* Supporting Files */,
+			);
+			path = wit.aiTests;
+			sourceTree = "<group>";
+		};
+		319F5D00198EAAAE001DF8A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				319F5D01198EAAAE001DF8A5 /* wit.aiTests-Info.plist */,
+				319F5D02198EAAAE001DF8A5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		319F5CD6198EAAAE001DF8A5 /* wit.ai */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 319F5D09198EAAAE001DF8A5 /* Build configuration list for PBXNativeTarget "wit.ai" */;
+			buildPhases = (
+				85915F9519D1483E8B09ACFD /* Check Pods Manifest.lock */,
+				319F5CD3198EAAAE001DF8A5 /* Sources */,
+				319F5CD4198EAAAE001DF8A5 /* Frameworks */,
+				319F5CD5198EAAAE001DF8A5 /* Resources */,
+				1BDD34DD6934464D94D83AB2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wit.ai;
+			productName = wit.ai;
+			productReference = 319F5CD7198EAAAE001DF8A5 /* wit.ai.app */;
+			productType = "com.apple.product-type.application";
+		};
+		319F5CF7198EAAAE001DF8A5 /* wit.aiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 319F5D0C198EAAAE001DF8A5 /* Build configuration list for PBXNativeTarget "wit.aiTests" */;
+			buildPhases = (
+				319F5CF4198EAAAE001DF8A5 /* Sources */,
+				319F5CF5198EAAAE001DF8A5 /* Frameworks */,
+				319F5CF6198EAAAE001DF8A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				319F5CFE198EAAAE001DF8A5 /* PBXTargetDependency */,
+			);
+			name = wit.aiTests;
+			productName = wit.aiTests;
+			productReference = 319F5CF8198EAAAE001DF8A5 /* wit.aiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		319F5CCF198EAAAE001DF8A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Bitpass, Inc.";
+				TargetAttributes = {
+					319F5CF7198EAAAE001DF8A5 = {
+						TestTargetID = 319F5CD6198EAAAE001DF8A5;
+					};
+				};
+			};
+			buildConfigurationList = 319F5CD2198EAAAE001DF8A5 /* Build configuration list for PBXProject "wit.ai" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 319F5CCE198EAAAE001DF8A5;
+			productRefGroup = 319F5CD8198EAAAE001DF8A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				319F5CD6198EAAAE001DF8A5 /* wit.ai */,
+				319F5CF7198EAAAE001DF8A5 /* wit.aiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		319F5CD5198EAAAE001DF8A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319F5D15198EAFFA001DF8A5 /* Main_iPhone.storyboard in Resources */,
+				319F5CF3198EAAAE001DF8A5 /* Images.xcassets in Resources */,
+				319F5CE5198EAAAE001DF8A5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		319F5CF6198EAAAE001DF8A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319F5D04198EAAAE001DF8A5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BDD34DD6934464D94D83AB2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-wit.ai-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85915F9519D1483E8B09ACFD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		319F5CD3198EAAAE001DF8A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319F5CE7198EAAAE001DF8A5 /* main.m in Sources */,
+				319F5D16198EAFFA001DF8A5 /* FOOViewController.m in Sources */,
+				319F5D14198EAFFA001DF8A5 /* FOOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		319F5CF4198EAAAE001DF8A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319F5D06198EAAAE001DF8A5 /* wit_aiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		319F5CFE198EAAAE001DF8A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 319F5CD6198EAAAE001DF8A5 /* wit.ai */;
+			targetProxy = 319F5CFD198EAAAE001DF8A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		319F5CE3198EAAAE001DF8A5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				319F5CE4198EAAAE001DF8A5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		319F5D02198EAAAE001DF8A5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				319F5D03198EAAAE001DF8A5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		319F5D07198EAAAE001DF8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		319F5D08198EAAAE001DF8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		319F5D0A198EAAAE001DF8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187FC7FB85974B168950A0D2 /* Pods-wit.ai.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wit.ai/wit.ai-Prefix.pch";
+				INFOPLIST_FILE = "wit.ai/wit.ai-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		319F5D0B198EAAAE001DF8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187FC7FB85974B168950A0D2 /* Pods-wit.ai.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wit.ai/wit.ai-Prefix.pch";
+				INFOPLIST_FILE = "wit.ai/wit.ai-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		319F5D0D198EAAAE001DF8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wit.ai.app/wit.ai";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wit.ai/wit.ai-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "wit.aiTests/wit.aiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		319F5D0E198EAAAE001DF8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wit.ai.app/wit.ai";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wit.ai/wit.ai-Prefix.pch";
+				INFOPLIST_FILE = "wit.aiTests/wit.aiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		319F5CD2198EAAAE001DF8A5 /* Build configuration list for PBXProject "wit.ai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				319F5D07198EAAAE001DF8A5 /* Debug */,
+				319F5D08198EAAAE001DF8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		319F5D09198EAAAE001DF8A5 /* Build configuration list for PBXNativeTarget "wit.ai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				319F5D0A198EAAAE001DF8A5 /* Debug */,
+				319F5D0B198EAAAE001DF8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		319F5D0C198EAAAE001DF8A5 /* Build configuration list for PBXNativeTarget "wit.aiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				319F5D0D198EAAAE001DF8A5 /* Debug */,
+				319F5D0E198EAAAE001DF8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 319F5CCF198EAAAE001DF8A5 /* Project object */;
+}

@@ -1,0 +1,9 @@
+hotel
+airbnb
+motel
+bedroom
+sleep
+bnb
+vegetarian
+vegan
+

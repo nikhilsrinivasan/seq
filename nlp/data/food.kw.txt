@@ -1,0 +1,57 @@
+hungry
+table
+chinese
+italian
+sushi
+thai
+pizza
+indian
+takeout
+african
+eat
+restaurant
+diner
+dining
+cafe
+dinner
+supper
+breakfast
+lunch
+brunch
+Bagels
+Bakeries
+Beer Wine Spirits
+Breweries
+Bubble Tea
+Butcher
+CSA
+Candy
+Cheese
+Chocolatiers
+Coffee Tea
+Cupcakes
+Desserts
+Distilleries
+Donuts
+Ethnic Food
+Farmers Market
+Food Delivery
+Food Trucks
+Fruits Veggies
+vegetables
+Gelato
+Grocery
+Health Markets
+Herbs Spices
+Ice Cream Frozen Yogurt
+Internet Cafes
+Juice Bars Smoothies
+Meat
+Pretzels
+Seafood
+Specialty Food
+Street Vendors
+Tea
+Wineries
+wine
+beer
