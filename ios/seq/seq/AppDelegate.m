@@ -1,19 +1,16 @@
 //
 //  AppDelegate.m
-//  Seq
+//  seq
 //
-//  Created by Neel Mouleeswaran on 8/1/14.
-//  Copyright (c) 2014 bitpass. All rights reserved.
+//  Copyright (c) 2014 Bitpass, Inc. All rights reserved.
 //
 
-#import "Helpers.h"
 #import "AppDelegate.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
     // Override point for customization after application launch.
     return YES;
 }

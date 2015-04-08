@@ -1,7 +1,0 @@
-flight
-airline
-airfare
-travel
-plane
-airport
-
